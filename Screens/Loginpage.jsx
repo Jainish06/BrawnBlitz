@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, loading, ToastAndroid, Keyboard, 
 import React,{useState} from 'react'
 import { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
 
 const Loginpage = ({navigation}) => {
 
@@ -46,7 +47,7 @@ const Loginpage = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btnCont}
-            onPress ={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}>
+            onPress ={() => onGoogleButtonPress().then(() => {console.log('Logged in with Google!'); ToastAndroid.show("Logged In!",ToastAndroid.BOTTOM)})}>
             <Text style={styles.btnText}>Continue with Google</Text>
           </TouchableOpacity>
           <TouchableOpacity

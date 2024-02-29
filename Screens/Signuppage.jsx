@@ -3,6 +3,8 @@ import React,{useState} from 'react'
 import { useNavigation} from '@react-navigation/native';
 import { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 function Signuppage() {
 
@@ -48,7 +50,7 @@ function Signuppage() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btnCont}
-            onPress ={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}>
+            onPress ={() => onGoogleButtonPress().then(() => {console.log('Signed in with Google!'); ToastAndroid.show("Signed Up!",ToastAndroid.BOTTOM)})}>
             <Text style={styles.btnText}>Google</Text>
           </TouchableOpacity>
           <TouchableOpacity
