@@ -1,10 +1,20 @@
 import { StyleSheet, Text, View, SafeAreaView, loading, ToastAndroid, Keyboard, ActivityIndicator, TextInput, TouchableOpacity } from 'react-native'
-import React,{useState} from 'react'
+import React,{useEffect,useState} from 'react'
 import { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 
 const Loginpage = ({navigation}) => {
+
+  function onAuthStateChanged(user) {
+    if(user){
+      navigation.navigate('Detailspage')
+    }
+  }
+  useEffect(()=>{
+    const User = auth().onAuthStateChanged(onAuthStateChanged);
+    return User;
+  },[]);
 
   GoogleSignin.configure({
     webClientId: '1083046700457-4534l36v1i1omvfoad2cq73ctqota3vg.apps.googleusercontent.com',
