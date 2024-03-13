@@ -8,16 +8,6 @@ import auth from '@react-native-firebase/auth';
 
 function Signuppage() {
 
-  function onAuthStateChanged(user) {
-    if(user){
-      navigation.navigate('Detailspage')
-    }
-  }
-  useEffect(()=>{
-    const User = auth().onAuthStateChanged(onAuthStateChanged);
-    return User;
-  },[]);
-
   GoogleSignin.configure({
     webClientId: '1083046700457-4534l36v1i1omvfoad2cq73ctqota3vg.apps.googleusercontent.com',
   });
@@ -61,7 +51,7 @@ function Signuppage() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btnCont}
-            onPress ={() => onGoogleButtonPress().then(() => {console.log('Signed in with Google!'); ToastAndroid.show("Signed Up!",ToastAndroid.BOTTOM);})}>
+            onPress ={() => onGoogleButtonPress().then(() => {console.log('Signed in with Google!'); ToastAndroid.show("Signed Up!",ToastAndroid.BOTTOM); navigation.navigate('Detailspage')})}>
             <Text style={styles.btnText}>Google</Text>
           </TouchableOpacity>
           <TouchableOpacity

@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { useNavigation} from '@react-navigation/native';
 import { TextInput } from 'react-native-paper';
 import database from '@react-native-firebase/database';
+import firestore from '@react-native-firebase/firestore';
 
-var bmi
+var Bmi
 
 export default function Detailspage() {
   const navigation = useNavigation();
@@ -18,17 +19,19 @@ export default function Detailspage() {
   const [Input5, setInput5] = useState(null);
   const [Input6, setInput6] = useState(null); 
   const [list, setList] = useState(null);
+  const ref = firestore().collection('users')
 
   const handleAddData = async() => {
     try {
-      const res = await database().ref('/users/1')
-      .set({
+      ref
+      .add({
         height : Input1,
         weight : Input2,
         age : Input3,
         gender : Input4,
         activity : Input5,
         goal : Input6,
+        bmi : (Input2/((Input1/100)*(Input1/100))).toFixed(2),
       })
       .then(() => console.log('Data set.'));
     } catch (error) {
@@ -36,9 +39,9 @@ export default function Detailspage() {
     }
   }
 
-  bmi = Input2/((Input1/100)*(Input1/100))
-  bmi = bmi.toFixed(2)
-
+  // Bmi = Input2/((Input1/100)*(Input1/100))
+  // Bmi = Bmi.toFixed(2)
+  
   return (
     <SafeAreaView style={styles.test}>
         <ScrollView>
@@ -94,7 +97,7 @@ export default function Detailspage() {
   )
 }
 
-export {bmi}
+export {Bmi}
 
 const styles = StyleSheet.create({
   test:{

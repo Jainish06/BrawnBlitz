@@ -1,21 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 import React from 'react'
-import { bmi } from './Detailspage'
+import { Bmi } from './Detailspage'
 
 const Bmipage = () => {
   return (
-    <View>
-      <Text style={styles.text}>Your BMI is {bmi}.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Your BMI is {Bmi}.</Text>
+    </SafeAreaView>
   )
 }
 
 export default Bmipage
 
 const styles = StyleSheet.create({
+  container:{
+    backgroundColor: 'black'
+  },
   text:{
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     fontWeight:'bold',
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
