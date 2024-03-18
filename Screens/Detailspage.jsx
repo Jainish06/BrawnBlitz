@@ -39,8 +39,8 @@ export default function Detailspage() {
     }
   }
 
-  // Bmi = Input2/((Input1/100)*(Input1/100))
-  // Bmi = Bmi.toFixed(2)
+  Bmi = Input2/((Input1/100)*(Input1/100))
+  Bmi = Bmi.toFixed(2)
   
   return (
     <SafeAreaView style={styles.test}>
