@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
-// import { Bmi } from './Detailspage'
+import { Bmi } from './Detailspage'
 import firestore from '@react-native-firebase/firestore';
 
 
@@ -22,7 +22,7 @@ const Bmipage = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Your BMI is {bmi}.</Text>
+      <Text style={styles.text}>Your BMI is {Bmi}.</Text>
       <Text style={styles.text}>Let's get started!.</Text>
       <TouchableOpacity
         style={styles.btnCont}
