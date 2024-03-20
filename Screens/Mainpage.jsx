@@ -12,11 +12,14 @@ const Mainpage = () => {
 export default Mainpage
 
 const styles = StyleSheet.create({
+    btmnav:{
+      marginTop:100
+    },
     text:{
-        textAlign: 'center',
-        color: 'black',
-        fontWeight:'bold',
-        fontSize: 20,
-        fontFamily: 'Montserrat-SemiBold',
+      textAlign: 'center',
+      color: 'black',
+      fontWeight:'bold',
+      fontSize: 20,
+      fontFamily: 'Montserrat-SemiBold',
       },
 })

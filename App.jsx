@@ -9,6 +9,7 @@ import Signuppage from './Screens/Signuppage'
 import Detailspage from './Screens/Detailspage'
 import Bmipage from './Screens/Bmipage'
 import Mainpage from './Screens/Mainpage'
+import Bottomnav from './Screens/Bottomnav'
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ const App = () => {
         <Stack.Screen name='Detailspage' component={Detailspage} />
         <Stack.Screen name='Bmipage' component={Bmipage} />
         <Stack.Screen name='Mainpage' component={Mainpage} />
+        <Stack.Screen name='Bottomnav' component={Bottomnav} />
       </Stack.Navigator>
     </NavigationContainer>
   );

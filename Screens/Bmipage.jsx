@@ -27,7 +27,7 @@ const Bmipage = ({navigation}) => {
       <TouchableOpacity
         style={styles.btnCont}
         activeOpacity={0.4}
-        onPress={() => navigation.navigate('Mainpage')}>
+        onPress={() => navigation.navigate('Bottomnav')}>
         <Text style={styles.btnText}>Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>
