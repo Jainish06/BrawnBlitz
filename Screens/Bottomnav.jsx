@@ -15,14 +15,26 @@ const Bottomnav = () => {
 
 function MyTabs() {
     return (
-        <Tab.Navigator>
-            <Tab.Screen name="Home" component={Mainpage} />
-            <Tab.Screen name="Discover" component={Discover} />
-            <Tab.Screen name="Report" component={Report} />
+        <Tab.Navigator
+        >
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarLabelStyle: {fontSize: 16}}} name="Home" component={Mainpage} />
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarLabelStyle: {fontSize: 16}}} name="Discover" component={Discover} />
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarLabelStyle: {fontSize: 16}}} name="Report" component={Report} />
         </Tab.Navigator>
     );
   }
 
 export default Bottomnav
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    btmnav:{
+        fontSize:20,
+        backgroundColor:'black'
+    }
+})

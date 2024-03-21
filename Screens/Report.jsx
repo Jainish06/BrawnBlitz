@@ -4,11 +4,19 @@ import React from 'react'
 const Report = () => {
   return (
     <View>
-      <Text>Report</Text>
+      <Text style={styles.text}>Report</Text>
     </View>
   )
 }
 
 export default Report
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    text:{
+        textAlign: 'center',
+        color: 'black',
+        fontWeight:'bold',
+        fontSize: 20,
+        fontFamily: 'Montserrat-SemiBold',
+        },
+})
