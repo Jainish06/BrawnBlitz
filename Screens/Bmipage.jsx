@@ -1,28 +1,18 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
-import React from 'react'
-import { Bmi } from './Detailspage'
+import React, { useState, useEffect } from 'react'
 import firestore from '@react-native-firebase/firestore';
-
+import { Bmi } from './Detailspage';
 
 const Bmipage = ({navigation}) => {
+  const [userBMI, setBMI] = useState(null)
 
-
-// Reference to the collection
-// const usersCollection = firestore().collection('users');
-// var Bmi
-// // Query the collection to get the data
-// usersCollection.get().then((querySnapshot) => {
-//   querySnapshot.forEach((documentSnapshot) => {
-//     // Access field data
-//     const {bmi} = documentSnapshot.data();
-//     console.log(bmi);
-//     Bmi = bmi
-//   });
-// });
+  useEffect(() => {
+      setBMI(Bmi);
+    });
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Your BMI is {Bmi}.</Text>
+      <Text style={styles.text}>Your BMI is {userBMI}.</Text>
       <Text style={styles.text}>Let's get started!.</Text>
       <TouchableOpacity
         style={styles.btnCont}

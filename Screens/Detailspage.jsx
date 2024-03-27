@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, ImageBackground, useColorScheme} from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigation} from '@react-navigation/native';
 import { TextInput } from 'react-native-paper';
 import database from '@react-native-firebase/database';
@@ -8,6 +8,23 @@ import firestore from '@react-native-firebase/firestore';
 var Bmi
 
 export default function Detailspage() {
+  // const [userData, setUserData] = useState(null);
+
+  // useEffect(() => {
+  //   const unsubscribe = firestore().collection('users').onSnapshot((querySnapshot) => {
+  //     const data = [];
+  //     querySnapshot.forEach((doc) => {
+  //       data.push({ id: doc.id, ...doc.data() });
+  //       Bmi = doc.data().bmi
+  //     });
+  //     // Update the state with the retrieved user data
+  //     setUserData(data);
+  //     console.log(data)
+  //   });
+
+  //   return () => unsubscribe();
+  // }, []);
+
   const navigation = useNavigation();
   const colorScheme = useColorScheme() === 'dark'
 
@@ -39,8 +56,8 @@ export default function Detailspage() {
     }
   }
 
-  Bmi = Input2/((Input1/100)*(Input1/100))
-  Bmi = Bmi.toFixed(2)
+  // Bmi = Input2/((Input1/100)*(Input1/100))
+  // Bmi = Bmi.toFixed(2)
   
   return (
     <SafeAreaView style={styles.test}>

@@ -6,15 +6,15 @@ import auth from '@react-native-firebase/auth';
 
 const Loginpage = ({navigation}) => {
 
-  function onAuthStateChanged(user) {
-    if(user){
-      navigation.navigate('Detailspage')
-    }
-  }
-  useEffect(()=>{
-    const User = auth().onAuthStateChanged(onAuthStateChanged);
-    return User;
-  },[]);
+  // function onAuthStateChanged(user) {
+  //   if(user){
+  //     navigation.navigate('Bmipage')
+  //   }
+  // }
+  // useEffect(()=>{
+  //   const User = auth().onAuthStateChanged(onAuthStateChanged);
+  //   return User;
+  // },[]);
 
   GoogleSignin.configure({
     webClientId: '1083046700457-4534l36v1i1omvfoad2cq73ctqota3vg.apps.googleusercontent.com',
@@ -57,7 +57,7 @@ const Loginpage = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btnCont}
-            onPress ={() => onGoogleButtonPress().then(() => {console.log('Logged in with Google!'); ToastAndroid.show("Logged In!",ToastAndroid.BOTTOM)})}>
+            onPress ={() => onGoogleButtonPress().then(() => {console.log('Logged in with Google!'); ToastAndroid.show("Logged In!",ToastAndroid.BOTTOM); navigation.navigate('Detailspage')})}>
             <Text style={styles.btnText}>Continue with Google</Text>
           </TouchableOpacity>
           <TouchableOpacity

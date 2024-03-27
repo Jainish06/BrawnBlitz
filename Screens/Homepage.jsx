@@ -1,10 +1,34 @@
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, ImageBackground, useColorScheme} from 'react-native'
-import React from 'react'
+import React,  { useState, useEffect } from 'react'
 import { useNavigation} from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 export default function Homepage() {
+
+  // const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState();
+
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    if(user){
+      setUser(user);}
+    else{
+      setUser(null)
+    }
+    // if (initializing) setInitializing(false);
+  }
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  // if (initializing) return null;
+
   const navigation = useNavigation();
   const colorScheme = useColorScheme() === 'dark'
+
   return (
     <SafeAreaView style={styles.test}>
       <ImageBackground source={require('./peakpx.jpg')} style={styles.img}>
@@ -14,7 +38,7 @@ export default function Homepage() {
           <View style={styles.container}>
             <View style={styles.card}>
               <TouchableOpacity  
-                onPress={() => navigation.navigate('Loginpage')}
+                onPress={() => {user ? navigation.navigate('Mainpage') : navigation.navigate('Loginpage')}}
                 style={styles.button}>
                 <Text style={styles.text}>Login</Text>
               </TouchableOpacity>
