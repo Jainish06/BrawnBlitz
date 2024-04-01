@@ -6,24 +6,28 @@ import database from '@react-native-firebase/database';
 import firestore from '@react-native-firebase/firestore';
 
 var Bmi
+var act_level
+var Goal
 
 export default function Detailspage() {
-  // const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState(null);
 
-  // useEffect(() => {
-  //   const unsubscribe = firestore().collection('users').onSnapshot((querySnapshot) => {
-  //     const data = [];
-  //     querySnapshot.forEach((doc) => {
-  //       data.push({ id: doc.id, ...doc.data() });
-  //       Bmi = doc.data().bmi
-  //     });
-  //     // Update the state with the retrieved user data
-  //     setUserData(data);
-  //     console.log(data)
-  //   });
+  useEffect(() => {
+    const unsubscribe = firestore().collection('users').onSnapshot((querySnapshot) => {
+      const data = [];
+      querySnapshot.forEach((doc) => {
+        data.push({ id: doc.id, ...doc.data() });
+        Bmi = doc.data().bmi
+        act_level = doc.data().activity_level
+        Goal = doc.data().goal
+      });
+      // Update the state with the retrieved user data
+      setUserData(data);
+      console.log(data)
+    });
 
-  //   return () => unsubscribe();
-  // }, []);
+    return () => unsubscribe();
+  }, []);
 
   const navigation = useNavigation();
   const colorScheme = useColorScheme() === 'dark'
@@ -114,7 +118,7 @@ export default function Detailspage() {
   )
 }
 
-export {Bmi}
+export {Bmi, act_level, Goal}
 
 const styles = StyleSheet.create({
   test:{

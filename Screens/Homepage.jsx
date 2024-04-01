@@ -3,18 +3,20 @@ import React,  { useState, useEffect } from 'react'
 import { useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+import { firebase } from '@react-native-firebase/auth';
 
 export default function Homepage() {
 
+  firebase.auth();
   // const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
 
   // Handle user state changes
   function onAuthStateChanged(user) {
     if(user){
-      setUser(user);}
+      setUser(true);}
     else{
-      setUser(null)
+      setUser(false)
     }
     // if (initializing) setInitializing(false);
   }
@@ -38,7 +40,7 @@ export default function Homepage() {
           <View style={styles.container}>
             <View style={styles.card}>
               <TouchableOpacity  
-                onPress={() => {user ? navigation.navigate('Mainpage') : navigation.navigate('Loginpage')}}
+                onPress={() => navigation.navigate('Detailspage')}
                 style={styles.button}>
                 <Text style={styles.text}>Login</Text>
               </TouchableOpacity>

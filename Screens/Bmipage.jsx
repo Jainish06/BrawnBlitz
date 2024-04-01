@@ -4,15 +4,15 @@ import firestore from '@react-native-firebase/firestore';
 import { Bmi } from './Detailspage';
 
 const Bmipage = ({navigation}) => {
-  const [userBMI, setBMI] = useState(null)
+  // const [userBMI, setBMI] = useState(null)
 
-  useEffect(() => {
-      setBMI(Bmi);
-    });
+  // useEffect(() => {
+  //     setBMI(Bmi);
+  //   });
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Your BMI is {userBMI}.</Text>
+      <Text style={styles.text}>Your BMI is {Bmi}.</Text>
       <Text style={styles.text}>Let's get started!.</Text>
       <TouchableOpacity
         style={styles.btnCont}

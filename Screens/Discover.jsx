@@ -1,39 +1,36 @@
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Discover = () => {
   return (
     <SafeAreaView style={styles.cont}>
-      <ImageBackground source={require('./gym.jpeg')} style={styles.img}>
-          <Text style={styles.text}>BrawnBlitz</Text>
-          <Text style={styles.text2}>Your Personal Trainer.</Text>
-          <TouchableOpacity style={styles.card1}>
-            <Text style={styles.text1}>You</Text>
-          </TouchableOpacity>
-          <View style={styles.row}>
-            <TouchableOpacity style={styles.card2}>
-              <Text style={styles.text1}>Burpees</Text>
+      <ScrollView>
+        <ImageBackground source={require('./gym.jpeg')} style={styles.img}>
+          <ScrollView>
+            <Text style={styles.text}>BrawnBlitz</Text>
+            <Text style={styles.text2}>Your Personal Trainer.</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.card3}>
-              <Text style={styles.text1}>Jump Squats</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.card4}>
-              <Text style={styles.text1}>Mountain Climbers</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-          </View>
-          <View style={styles.row}>
-            <TouchableOpacity style={styles.card5}>
-              <Text style={styles.text1}>High Knees</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.card6}>
-              <Text style={styles.text1}>Sprints</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.card7}>
-              <Text style={styles.text1}>Jumping Lungees</Text>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
-          </View>
-      </ImageBackground>
+          </ScrollView>
+        </ImageBackground>
+      </ScrollView>
     </SafeAreaView>
   )
 }
@@ -54,8 +51,8 @@ const styles = StyleSheet.create({
     backgroundColor:'#EDD187',
     alignSelf:'center',
     marginBottom:10,
-    height:160,
-    width:360,
+    height:100,
+    width:310,
     borderRadius:20,
     elevation:20,
   },
