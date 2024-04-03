@@ -7,15 +7,23 @@ const Discover = () => {
     <SafeAreaView style={styles.cont}>
       <ScrollView>
         <ImageBackground source={require('./gym.jpeg')} style={styles.img}>
+          <Text style={styles.text}>BrawnBlitz</Text>
+          <Text style={styles.text2}>Your Personal Trainer</Text>
+          <ScrollView horizontal={true} style={styles.cont1}>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.card1}>
+              <Text style={styles.text1}>You</Text>
+            </TouchableOpacity>
+          </ScrollView>
           <ScrollView>
-            <Text style={styles.text}>BrawnBlitz</Text>
-            <Text style={styles.text2}>Your Personal Trainer.</Text>
-            <TouchableOpacity style={styles.card1}>
-              <Text style={styles.text1}>You</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.card1}>
-              <Text style={styles.text1}>You</Text>
-            </TouchableOpacity>
             <TouchableOpacity style={styles.card1}>
               <Text style={styles.text1}>You</Text>
             </TouchableOpacity>
@@ -43,16 +51,23 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     backgroundColor:'white',
   },
+  cont1:{
+    height:230
+  },
   row:{
     flex:1,
     flexDirection:'row'
   },
   card1:{
+    flex:1,
     backgroundColor:'#EDD187',
+    alignItems:'center',
+    justifyContent:'center',
     alignSelf:'center',
     marginBottom:10,
-    height:100,
-    width:310,
+    height:130,
+    width:200,
+    margin:8,
     borderRadius:20,
     elevation:20,
   },
