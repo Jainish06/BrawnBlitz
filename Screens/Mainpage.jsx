@@ -153,7 +153,7 @@ const Mainpage = () => {
   return (
     <SafeAreaView style={styles.cont}>
       <ScrollView>
-        <ImageBackground source={require('./gym.jpeg')} style={styles.img}>
+        <ImageBackground source={require('./gym7.jpeg')} style={styles.img}>
           <Text style={styles.text}>BrawnBlitz</Text>
           <Text style={styles.text2}>Your Personal Trainer</Text>
           <View style={styles.column}>
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     },
     text:{
       textAlign: 'center',
-      color: 'black',
+      color: 'white',
       fontWeight:'bold',
       fontSize: 20,
       fontFamily: 'Montserrat-SemiBold',
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
     },
     text2:{
       textAlign: 'center',
-      color: 'black',
+      color: 'white',
       fontWeight:'bold',
       fontSize: 20,
       fontFamily: 'Montserrat-SemiBold',
