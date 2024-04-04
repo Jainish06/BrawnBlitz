@@ -4,6 +4,7 @@ import { useNavigation} from '@react-navigation/native';
 import { TextInput } from 'react-native-paper';
 import database from '@react-native-firebase/database';
 import firestore from '@react-native-firebase/firestore';
+import { Picker } from '@react-native-picker/picker';
 
 var Bmi
 var act_level
@@ -95,7 +96,7 @@ export default function Detailspage() {
             onChangeText={value => setInput4(value)}>
             </TextInput>
             <TextInput
-            placeholder='Activity level'
+            placeholder='Activity level : Low/Medium/Active'
             style={styles.input5}
             value={Input5}
             onChangeText={value => setInput5(value)}>

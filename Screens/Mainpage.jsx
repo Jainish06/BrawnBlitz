@@ -12,7 +12,7 @@ var intensity
 var freq
 const ST = ['Squats', 'Lunges', 'Push-ups', 'Pull-ups', 'Bench-press', 'Jumping Jacks']
 const HIIT = ['Burpees', 'Jump Squats', 'Mountain Climbers', 'High Knees', 'Sprints', 'Jumping Lunges']
-const Yoga = ['Surya Namaskar', 'Virbhadrasana', 'Trikonasana', 'Bhujangasana', 'Matsyasana', 'Shavasana']
+// const Yoga = ['Surya Namaskar', 'Virbhadrasana', 'Trikonasana', 'Bhujangasana', 'Matsyasana', 'Shavasana']
 const Cardio = ['Running', 'Cycling', 'Jump rope', 'Rowing', 'Circuit Training', 'Kick-Boxing']
 var type_ind = []
 
@@ -109,6 +109,9 @@ const Mainpage = () => {
       Linking.openURL('https://youtu.be/M3330xDmcN0?si=qgNcZ6vYn9Zc2V-Q');
     }
   };
+  const handlePress7 = () => {
+      Linking.openURL('https://youtu.be/brjAjq4zEIE?si=0IpFu28OATLPfvf-');
+  };
   // const [userData, setUserData] = useState(null);
 
   // useEffect(() => {
@@ -189,6 +192,9 @@ const Mainpage = () => {
               <Text style={styles.text1}>{type_ind[5]}</Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity style={styles.card8} onPress={handlePress7}>
+            <Text style={styles.text3}>Yoga</Text>
+          </TouchableOpacity>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -212,7 +218,7 @@ const styles = StyleSheet.create({
       flexDirection:'column'
     },
     card1:{
-      backgroundColor:'#EDD187',
+      backgroundColor:'#6e7680',
       alignSelf:'center',
       marginBottom:10,
       height:70,
@@ -221,7 +227,7 @@ const styles = StyleSheet.create({
       elevation:20,
     },
     card2:{
-      backgroundColor:'#EAE1C2',
+      backgroundColor:'#919eab',
       marginLeft:20,
       marginTop:70,
       height:110,
@@ -231,7 +237,7 @@ const styles = StyleSheet.create({
       elevation:20
     },
     card3:{
-      backgroundColor:'#EAE1C2',
+      backgroundColor:'#919eab',
       marginLeft:15,
       marginTop:70,
       height:110,
@@ -241,7 +247,7 @@ const styles = StyleSheet.create({
       elevation:20
     },
     card4:{
-      backgroundColor:'#EAE1C2',
+      backgroundColor:'#919eab',
       marginLeft:15,
       marginTop:70,
       height:110,
@@ -251,8 +257,8 @@ const styles = StyleSheet.create({
       elevation:20
     },
     card5:{
-      backgroundColor:'#EAE1C2',
-      marginLeft:15,
+      backgroundColor:'#919eab',
+      marginLeft:17,
       height:110,
       width:110,
       borderRadius:20,
@@ -260,8 +266,8 @@ const styles = StyleSheet.create({
       elevation:20
     },
     card6:{
-      backgroundColor:'#EAE1C2',
-      marginLeft:15,
+      backgroundColor:'#919eab',
+      marginLeft:17,
       height:110,
       width:110,
       borderRadius:20,
@@ -269,12 +275,21 @@ const styles = StyleSheet.create({
       elevation:20
     },
     card7:{
-      backgroundColor:'#EAE1C2',
-      marginLeft:15,
+      backgroundColor:'#919eab',
+      marginLeft:17,
       height:110,
       width:110,
       borderRadius:20,
       padding:3,
+      elevation:20
+    },
+    card8:{
+      backgroundColor:'#919eab',
+      alignSelf:'center',
+      margin:7,
+      height:30,
+      width:100,
+      borderRadius:20,
       elevation:20
     },
     text:{
@@ -288,7 +303,7 @@ const styles = StyleSheet.create({
     },
     text1:{
       textAlign: 'center',
-      color: 'black',
+      color: 'white',
       fontWeight:'bold',
       fontSize: 17,
       fontFamily: 'Montserrat-SemiBold',
@@ -303,6 +318,13 @@ const styles = StyleSheet.create({
       fontFamily: 'Montserrat-SemiBold',
       marginTop:1,
       marginBottom:30
+    },
+    text3:{
+      textAlign: 'center',
+      color: 'white',
+      fontWeight:'bold',
+      fontSize: 17,
+      fontFamily: 'Montserrat-SemiBold',
     },
     img:{
       height:710

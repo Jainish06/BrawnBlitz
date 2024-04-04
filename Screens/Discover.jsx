@@ -31,7 +31,7 @@ const Discover = () => {
 
   return (
     <SafeAreaView style={styles.cont}>
-      <ScrollView>
+      {/* <ScrollView> */}
         <ImageBackground source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/gym7.jpeg')} style={styles.img}>
           <Text style={styles.text}>BrawnBlitz</Text>
           <Text style={styles.text2}>Your Personal Trainer</Text>
@@ -69,7 +69,7 @@ const Discover = () => {
             <Text style={styles.text1}>Effects Of Air Pollution On Human Health</Text>
           </ScrollView>
         </ImageBackground>
-      </ScrollView>
+      {/* </ScrollView> */}
     </SafeAreaView>
   )
 }
