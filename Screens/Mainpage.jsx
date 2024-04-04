@@ -153,7 +153,7 @@ const Mainpage = () => {
   return (
     <SafeAreaView style={styles.cont}>
       <ScrollView>
-        <ImageBackground source={require('./gym7.jpeg')} style={styles.img}>
+        <ImageBackground source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/gym7.jpeg')} style={styles.img}>
           <Text style={styles.text}>BrawnBlitz</Text>
           <Text style={styles.text2}>Your Personal Trainer</Text>
           <View style={styles.column}>

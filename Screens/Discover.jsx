@@ -26,47 +26,47 @@ const Discover = () => {
     Linking.openURL('https://www.anytimefitness.co.in/how-much-protein-is-required-to-eat-per-day-for-muscle-building/');
   };
   const handlePress8 = () => {
-    Linking.openURL('https://youtu.be/IODxDxX7oi4?si=rkOWqCdN9Fyqhi_N');
+    Linking.openURL('https://www.anytimefitness.co.in/effects-of-air-pollution-on-human-health-increase-your-immunity-against-pollution/');
   };
 
   return (
     <SafeAreaView style={styles.cont}>
       <ScrollView>
-        <ImageBackground source={require('./gym7.jpeg')} style={styles.img}>
+        <ImageBackground source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/gym7.jpeg')} style={styles.img}>
           <Text style={styles.text}>BrawnBlitz</Text>
           <Text style={styles.text2}>Your Personal Trainer</Text>
           <ScrollView horizontal={true} style={styles.cont1}>
             <TouchableOpacity style={styles.card1} onPress={handlePress1}>
-              <Image source={require('./fullbod.jpeg')} style={styles.image} />
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/fullbod.jpeg')} style={styles.image} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.card1} onPress={handlePress2}>
-              <Image source={require('./loseweight.jpeg')} style={styles.image} />
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/loseweight.jpeg')} style={styles.image} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.card1} onPress={handlePress3}>
-              <Image source={require('./top.jpeg')} style={styles.image} />
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/top.jpeg')} style={styles.image} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.card1} onPress={handlePress4}>
-              <Image source={require('./types.jpeg')} style={styles.image} />
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/types.jpeg')} style={styles.image} />
             </TouchableOpacity>
           </ScrollView>
           <Text style={styles.text2}>Most popular stories.</Text>
           <ScrollView>
             <TouchableOpacity style={styles.card2} onPress={handlePress5}>
-              <Image source={require('./vegan.jpeg')} style={styles.image2}/>
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/vegan.jpeg')} style={styles.image2}/>
             </TouchableOpacity>
             <Text style={styles.text1}>Protein-Packed Vegan Buckeyes</Text>
             <TouchableOpacity style={styles.card2} onPress={handlePress6}>
-              <Image source={require('./mind.jpeg')} style={styles.image2}/>
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/mind.jpeg')} style={styles.image2}/>
             </TouchableOpacity>
             <Text style={styles.text1}>Mindful Eating for Emotional Wellness</Text>
             <TouchableOpacity style={styles.card2} onPress={handlePress7}>
-              <Image source={require('./protein.jpeg')} style={styles.image2}/>
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/protein.jpeg')} style={styles.image2}/>
             </TouchableOpacity>
             <Text style={styles.text1}>How Much Protein Are You Required To Eat Per Day For Muscle Building?</Text>
             <TouchableOpacity style={styles.card2} onPress={handlePress8}>
-              <Image source={require('./mind.jpeg')} style={styles.image2}/>
+              <Image source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/air.jpeg')} style={styles.image2}/>
             </TouchableOpacity>
-            <Text style={styles.text1}>Protein-Packed Vegan Buckeyes</Text>
+            <Text style={styles.text1}>Effects Of Air Pollution On Human Health</Text>
           </ScrollView>
         </ImageBackground>
       </ScrollView>

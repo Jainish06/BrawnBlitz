@@ -33,7 +33,7 @@ export default function Homepage() {
 
   return (
     <SafeAreaView style={styles.test}>
-      <ImageBackground source={require('./peakpx.jpg')} style={styles.img}>
+      <ImageBackground source={require('/Users/jainishpathak/Desktop/React-Native/BrawnBlitz/Components/peakpx.jpg')} style={styles.img}>
         <ScrollView>
           <Text style={colorScheme ? styles.dark : styles.white}>BrawnBlitz</Text>
           <Text style={colorScheme ? styles.dark1 : styles.white1}>Your Personel Trainer</Text>
